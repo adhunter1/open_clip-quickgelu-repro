@@ -1,0 +1,6 @@
+README snippet run verbatim:
+# OpenAI weights were trained with QuickGELU; use the -quickgelu model name (or pass force_quick_gelu=True)
+model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32-quickgelu', pretrained='openai')
+
+[README snippet] activation modules: ['QuickGELU'] | GELU warnings: none
+[ViT-B-32 + force_quick_gelu=True] activation modules: ['QuickGELU'] | GELU warnings: none

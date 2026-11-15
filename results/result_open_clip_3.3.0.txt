@@ -1,0 +1,15 @@
+open_clip 3.3.0 | torch 2.15.0+cpu
+
+[ViT-B-32, pretrained='openai']
+  activation modules : ['GELU']
+  GELU warnings      : ["QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True)."]
+  zero-shot CIFAR-10 : 85.00% on first 1000 test images
+
+[ViT-B-32-quickgelu, pretrained='openai']
+  activation modules : ['QuickGELU']
+  GELU warnings      : none
+  zero-shot CIFAR-10 : 89.50% on first 1000 test images
+
+Image-embedding cosine similarity between the two loads: mean 0.9363, min 0.8341
+Expected if README claim held: same activation, identical accuracy, cosine = 1.0000
+exit 0
